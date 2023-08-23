@@ -19,7 +19,7 @@ class MyAdapter(
     private val viewModel: CustomViewModel,
     private val context: Context,
     private val data: ArrayList<location>
-): RecyclerView.Adapter<MyAdapter.ViewHolder> (), Filterable{
+): RecyclerView.Adapter<MyAdapter.ViewHolder> (){
 
     class ViewHolder(view: View):RecyclerView.ViewHolder(view){
         val searchList=view.findViewById<TextView>(R.id.textView)
@@ -40,12 +40,6 @@ class MyAdapter(
             viewModel.getWeather(data[position].city!!)
             binding.recyclerView.visibility = View.INVISIBLE
         }
-    }
-
-    fun String.toEditable(): Editable =  Editable.Factory.getInstance().newEditable(this)
-
-    override fun getFilter(): Filter {
-        TODO("Not yet implemented")
     }
 
 }

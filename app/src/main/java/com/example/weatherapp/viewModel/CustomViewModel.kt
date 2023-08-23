@@ -13,7 +13,6 @@ import kotlinx.coroutines.launch
 
 class CustomViewModel(): ViewModel() {
     private var result = MutableLiveData<WeatherData>()
-    val exceptionError = MutableLiveData<String>()
     private var result2:ArrayList<location> = ArrayList()
     val data2 = MutableLiveData<ArrayList<location>>()
 
